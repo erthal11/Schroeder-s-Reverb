@@ -79,5 +79,8 @@ private:
     float output6 = 0;
     float output7 = 0;
     
+    float feedBack;
+    float feedForward;
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ReverbAudioProcessor)
 };

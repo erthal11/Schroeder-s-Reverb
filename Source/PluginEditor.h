@@ -29,18 +29,21 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     ReverbAudioProcessor& audioProcessor;
-    
-    juce::Slider allPassFBSlider;
-    juce::Slider decaySlider;
+
+    juce::Slider sizeSlider;
     juce::Slider mixSlider;
+    
+//    juce::Slider outA;
+//    juce::Slider outB;
+//    juce::Slider outC;
+//    juce::Slider outD;
     
     void sliderValueChanged (juce::Slider* sliderGain) override;
     
 public:
     
-    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> allPassFBValue;
     
-    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> decayValue;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> sizeValue;
     
     std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> mixValue;
 

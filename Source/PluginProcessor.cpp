@@ -35,11 +35,9 @@ juce::AudioProcessorValueTreeState::ParameterLayout ReverbAudioProcessor::create
 {
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
     
-    auto allPassfbParam = std::make_unique<juce::AudioParameterFloat>("apfb","Apfb", 0.f,1.f,0.7f);
-    params.push_back(std::move(allPassfbParam));
     
-    auto decayParam = std::make_unique<juce::AudioParameterFloat>("decay","Decay", 0.f,1.f,0.75f);
-    params.push_back(std::move(decayParam));
+    auto sizeParam = std::make_unique<juce::AudioParameterFloat>("size","Size", 0.f,3000.f,0.f);
+    params.push_back(std::move(sizeParam));
     
     auto mixParam = std::make_unique<juce::AudioParameterFloat>("mix","Mix", 0.f,1.f,1.f);
     params.push_back(std::move(mixParam));
@@ -188,9 +186,9 @@ void ReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
     line2.setDelay(113.f);
     line3.setDelay(37.f);
     
-    auto apfb =(treeState.getRawParameterValue("apfb"))->load();
+    float allPassfbVal = 0.7;
     
-    auto decay = (treeState.getRawParameterValue("decay"))->load();
+    auto size = (treeState.getRawParameterValue("size"))->load();
 
     for (int channel = 0; channel<getTotalNumInputChannels(); ++channel)
     {
@@ -200,47 +198,54 @@ void ReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
         for (int sample = 0; sample < buffer.getNumSamples(); ++ sample)
         {
             output1 = line1.popSample(channel);
-            line1.pushSample(channel, channelData[sample] + output1 * apfb);
-            channelData[sample] = output1 + -1*output1*apfb;
+            feedBack = output1 * allPassfbVal;
+            feedForward = - channelData[sample] - output1*allPassfbVal;
+            line1.pushSample(channel, channelData[sample] + feedBack);
+            channelData[sample] = output1 + feedForward;
             
             output2 = line2.popSample(channel);
-            line2.pushSample(channel, channelData[sample] + output2 * apfb);
-            channelData[sample] = output2 + -1*output2*apfb;
+            feedBack = output2 * allPassfbVal;
+            feedForward = - channelData[sample] - output2*allPassfbVal;
+            line2.pushSample(channel, channelData[sample] + feedBack);
+            channelData[sample] = output2 + feedForward;
             
             output3 = line3.popSample(channel);
-            line3.pushSample(channel, channelData[sample] + output3 * apfb);
-            channelData[sample] = output3 + -1*output3*apfb;
+            feedBack = output3 * allPassfbVal;
+            feedForward = - channelData[sample] - output3*allPassfbVal;
+            line3.pushSample(channel, channelData[sample] + feedBack);
+            channelData[sample] = output3 + feedForward;
         }
         
-        line4.setDelay(1687);
-        line5.setDelay(1601);
-        line6.setDelay(2053);
-        line7.setDelay(2251);
+        line4.setDelay(1687 + size);
+        line5.setDelay(1601 + size);
+        line6.setDelay(2053 + size);
+        line7.setDelay(2251 + size);
         
         //combfilters
-        auto x1 = channelData;
-        auto x2 = channelData;
-        auto x3 = channelData;
-        auto x4 = channelData;
         for (int sample = 0; sample < buffer.getNumSamples(); ++ sample)
         {
+            auto x1 = channelData[sample];
+            auto x2 = channelData[sample];
+            auto x3 = channelData[sample];
+            auto x4 = channelData[sample];
+            
             output4 = line4.popSample(channel);
-            line4.pushSample(channel, x1[sample] + output4 * decay);
-            x1[sample] = output4;
+            line4.pushSample(channel, x1 + output4 * .773);
+            x1 = output4;
             
             output5 = line5.popSample(channel);
-            line5.pushSample(channel, x2[sample] + output5 * decay);
-            x2[sample] = output5;
+            line5.pushSample(channel, x2 + output5 * .802);
+            x2 = output5;
             
             output6 = line6.popSample(channel);
-            line6.pushSample(channel, x3[sample] + output6 * decay);
-            x3[sample] = output6;
+            line6.pushSample(channel, x3 + output6 * .753);
+            x3 = output6;
             
             output7 = line7.popSample(channel);
-            line7.pushSample(channel, x4[sample] + output7 * decay);
-            x4[sample] = output7;
+            line7.pushSample(channel, x4 + output7 * .773);
+            x4 = output7;
             
-            channelData[sample] = x1[sample] + x2[sample] + x3[sample] + x4[sample];
+            channelData[sample] = x1 + x2 + x3 + x4;
         }
         
     }
