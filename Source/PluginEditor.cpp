@@ -21,7 +21,6 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     sizeSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     sizeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
     sizeSlider.addListener(this);
-    sizeSlider.
     addAndMakeVisible(&sizeSlider);
     
     sizeValue = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, "size", sizeSlider);

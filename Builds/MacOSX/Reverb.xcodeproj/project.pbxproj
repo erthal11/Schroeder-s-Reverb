@@ -171,11 +171,11 @@
 			path = System/Library/Frameworks/CoreAudio.framework;
 			sourceTree = SDKROOT;
 		};
-		0807AADD0EF6394EEB1EA99E = {
+		0A5018AEC176C3490580BBD6 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
-			name = "juce_core";
-			path = "/Applications/JUCE/modules/juce_core";
+			name = "juce_audio_utils";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_utils";
 			sourceTree = "<absolute>";
 		};
 		0CB15A8017B681B4F2ED4DD3 = {
@@ -191,6 +191,20 @@
 			name = JuceHeader.h;
 			path = ../../JuceLibraryCode/JuceHeader.h;
 			sourceTree = "SOURCE_ROOT";
+		};
+		10D1DF659EFF52200E948AA4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_data_structures";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_data_structures";
+			sourceTree = "<absolute>";
+		};
+		11890BF2A874F64F1159F291 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_gui_extra";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_gui_extra";
+			sourceTree = "<absolute>";
 		};
 		13AFF5B4336136425B24D9F4 = {
 			isa = PBXFileReference;
@@ -234,18 +248,11 @@
 			path = "../../JuceLibraryCode/include_juce_dsp.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		28C0AA55FABF14FFF8348D6C = {
+		2D07686091796E3962027449 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
-			name = "juce_dsp";
-			path = "/Applications/JUCE/modules/juce_dsp";
-			sourceTree = "<absolute>";
-		};
-		2ABC47E03ABEB374F6551D66 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_gui_basics";
-			path = "/Applications/JUCE/modules/juce_gui_basics";
+			name = "juce_events";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_events";
 			sourceTree = "<absolute>";
 		};
 		2F53B21E452747B2B5D9455F = {
@@ -261,13 +268,6 @@
 			name = PluginProcessor.h;
 			path = ../../Source/PluginProcessor.h;
 			sourceTree = "SOURCE_ROOT";
-		};
-		348A683DBDF56DA139A16BD8 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_data_structures";
-			path = "/Applications/JUCE/modules/juce_data_structures";
-			sourceTree = "<absolute>";
 		};
 		366915142274353AB2D99E1C = {
 			isa = PBXFileReference;
@@ -304,18 +304,11 @@
 			path = ../../Source/PluginEditor.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
-		522E3478E468A1867415AED1 = {
+		4D5837685A20BA24ACFDB234 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
-			name = "juce_audio_formats";
-			path = "/Applications/JUCE/modules/juce_audio_formats";
-			sourceTree = "<absolute>";
-		};
-		52A967E8AEB18FD80E83CE1C = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_graphics";
-			path = "/Applications/JUCE/modules/juce_graphics";
+			name = "juce_audio_devices";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_devices";
 			sourceTree = "<absolute>";
 		};
 		533D5E1B7F97886D18B2A0AB = {
@@ -332,13 +325,6 @@
 			path = ../../Source/PluginProcessor.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
-		69826F8C5EF37F8390E64D68 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_events";
-			path = "/Applications/JUCE/modules/juce_events";
-			sourceTree = "<absolute>";
-		};
 		6AD7485DC87D0402BEC173C4 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -346,18 +332,39 @@
 			path = "../../JuceLibraryCode/include_juce_audio_utils.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		6AFD27B7D6B033AF4357750D = {
+		70F654D6583C44B74D730F56 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
-			name = "juce_audio_utils";
-			path = "/Applications/JUCE/modules/juce_audio_utils";
+			name = "juce_core";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_core";
 			sourceTree = "<absolute>";
 		};
-		70983EFDDC920A75A4E5F68B = {
+		723FD0A12ECFB7E2A7B9B87C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_plugin_client_AU_2.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		748518CEBA7661E3D6389CCF = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
-			name = "juce_audio_plugin_client";
-			path = "/Applications/JUCE/modules/juce_audio_plugin_client";
+			name = "juce_audio_processors";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors";
+			sourceTree = "<absolute>";
+		};
+		8967CB6797AB8FEE0D165F5E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_formats.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_formats.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8B119D09A61A02CFF1A6DA33 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_graphics";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_graphics";
 			sourceTree = "<absolute>";
 		};
 		98428356D3CA448A6B918FAF = {
@@ -423,13 +430,6 @@
 			path = libReverb.a;
 			sourceTree = "BUILT_PRODUCTS_DIR";
 		};
-		723FD0A12ECFB7E2A7B9B87C = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_plugin_client_AU_2.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
 		762027D99919040AB5BDE775 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -444,19 +444,19 @@
 			path = "../../JuceLibraryCode/include_juce_core.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		8967CB6797AB8FEE0D165F5E = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_formats.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_formats.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
 		8DACD4CC088CF64940C836CA = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_audio_processors.mm";
 			path = "../../JuceLibraryCode/include_juce_audio_processors.mm";
 			sourceTree = "SOURCE_ROOT";
+		};
+		9676AC9003A5E85FBF4BBFDB = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_gui_basics";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_gui_basics";
+			sourceTree = "<absolute>";
 		};
 		981CA3C231D20948362D2365 = {
 			isa = PBXFileReference;
@@ -471,6 +471,13 @@
 			name = "include_juce_events.mm";
 			path = "../../JuceLibraryCode/include_juce_events.mm";
 			sourceTree = "SOURCE_ROOT";
+		};
+		A3DC76B33E20E6628D3BE983 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_dsp";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_dsp";
+			sourceTree = "<absolute>";
 		};
 		A90A0357EEFC526F048753F9 = {
 			isa = PBXFileReference;
@@ -507,19 +514,19 @@
 			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST_utils.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		CA1BBBBA158E0F8034EE373B = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_basics";
-			path = "/Applications/JUCE/modules/juce_audio_basics";
-			sourceTree = "<absolute>";
-		};
 		CB1D206D8007DE5E7369805F = {
 			isa = PBXFileReference;
 			lastKnownFileType = text.plist.xml;
 			name = "Info-Standalone_Plugin.plist";
 			path = "Info-Standalone_Plugin.plist";
 			sourceTree = "SOURCE_ROOT";
+		};
+		D5B5B1CAF77F815CBD8446FC = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_audio_plugin_client";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client";
+			sourceTree = "<absolute>";
 		};
 		E0E528696216697DA1502E1F = {
 			isa = PBXFileReference;
@@ -528,18 +535,18 @@
 			path = "../../JuceLibraryCode/include_juce_gui_extra.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		E7AF0AC2C97363726228F590 = {
+		E34232B4C40843D890CEF6FB = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
-			name = "juce_audio_processors";
-			path = "/Applications/JUCE/modules/juce_audio_processors";
+			name = "juce_audio_basics";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_basics";
 			sourceTree = "<absolute>";
 		};
-		E8E117325EFC833DC747A2C1 = {
+		E5C8374ED89B04F66094C362 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
-			name = "juce_gui_extra";
-			path = "/Applications/JUCE/modules/juce_gui_extra";
+			name = "juce_audio_formats";
+			path = "/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_formats";
 			sourceTree = "<absolute>";
 		};
 		F350B5B4C3E4B69D64BC9EA0 = {
@@ -548,13 +555,6 @@
 			name = JucePluginDefines.h;
 			path = ../../JuceLibraryCode/JucePluginDefines.h;
 			sourceTree = "SOURCE_ROOT";
-		};
-		F4C777B7A0584AAD1BE83CDB = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_devices";
-			path = "/Applications/JUCE/modules/juce_audio_devices";
-			sourceTree = "<absolute>";
 		};
 		F7B1E421309EA52EF63F99C4 = {
 			isa = PBXFileReference;
@@ -585,19 +585,19 @@
 		AA96606B55B381A83DE7E177 = {
 			isa = PBXGroup;
 			children = (
-				CA1BBBBA158E0F8034EE373B,
-				F4C777B7A0584AAD1BE83CDB,
-				522E3478E468A1867415AED1,
-				70983EFDDC920A75A4E5F68B,
-				E7AF0AC2C97363726228F590,
-				6AFD27B7D6B033AF4357750D,
-				0807AADD0EF6394EEB1EA99E,
-				348A683DBDF56DA139A16BD8,
-				28C0AA55FABF14FFF8348D6C,
-				69826F8C5EF37F8390E64D68,
-				52A967E8AEB18FD80E83CE1C,
-				2ABC47E03ABEB374F6551D66,
-				E8E117325EFC833DC747A2C1,
+				E34232B4C40843D890CEF6FB,
+				4D5837685A20BA24ACFDB234,
+				E5C8374ED89B04F66094C362,
+				D5B5B1CAF77F815CBD8446FC,
+				748518CEBA7661E3D6389CCF,
+				0A5018AEC176C3490580BBD6,
+				70F654D6583C44B74D730F56,
+				10D1DF659EFF52200E948AA4,
+				A3DC76B33E20E6628D3BE983,
+				2D07686091796E3962027449,
+				8B119D09A61A02CFF1A6DA33,
+				9676AC9003A5E85FBF4BBFDB,
+				11890BF2A874F64F1159F291,
 			);
 			name = "JUCE Modules";
 			sourceTree = "<group>";
@@ -821,10 +821,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-VST3.plist;
@@ -833,10 +833,10 @@
 				LIBRARY_STYLE = Bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				OTHER_LDFLAGS = "-bundle -lReverb";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nate08Records.Reverb;
@@ -940,10 +940,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-VST3.plist;
@@ -953,10 +953,10 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				OTHER_LDFLAGS = "-bundle -lReverb";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nate08Records.Reverb;
@@ -1060,10 +1060,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-AU.plist;
@@ -1072,10 +1072,10 @@
 				LIBRARY_STYLE = Bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				OTHER_LDFLAGS = "-bundle -lReverb";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
@@ -1180,10 +1180,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-AU.plist;
@@ -1193,10 +1193,10 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				OTHER_LDFLAGS = "-bundle -lReverb";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
@@ -1298,20 +1298,20 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				OTHER_LDFLAGS = "-lReverb";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nate08Records.Reverb;
@@ -1411,10 +1411,10 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
@@ -1422,10 +1422,10 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				OTHER_LDFLAGS = "-lReverb";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nate08Records.Reverb;
@@ -1526,19 +1526,19 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nate08Records.Reverb;
 				PRODUCT_NAME = "Reverb";
@@ -1639,20 +1639,20 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
-					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"../../JuceLibraryCode",
-					"/Applications/JUCE/modules",
-					"/Applications/JUCE/modules/juce_audio_plugin_client",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules",
+					"/Users/nathanerthal/Desktop/Dev/JUCE/modules/juce_audio_plugin_client",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nate08Records.Reverb;
 				PRODUCT_NAME = "Reverb";

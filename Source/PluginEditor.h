@@ -24,6 +24,8 @@ public:
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
+    
+    void sliderValueChanged (juce::Slider* sliderGain) override;
 
 private:
     // This reference is provided as a quick way for your editor to
@@ -38,7 +40,6 @@ private:
 //    juce::Slider outC;
 //    juce::Slider outD;
     
-    void sliderValueChanged (juce::Slider* sliderGain) override;
     
 public:
     
