@@ -82,5 +82,7 @@ private:
     float feedBack;
     float feedForward;
     
+    juce::dsp::DryWetMixer <float> mixer;
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ReverbAudioProcessor)
 };

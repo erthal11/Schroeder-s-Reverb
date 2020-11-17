@@ -33,18 +33,39 @@ private:
     ReverbAudioProcessor& audioProcessor;
 
     juce::Slider sizeSlider;
+    juce::Slider decaySlider;
+    
+    juce::Slider outASlider;
+    juce::Slider outBSlider;
+    juce::Slider outCSlider;
+    juce::Slider outDSlider;
+    
     juce::Slider mixSlider;
     
-//    juce::Slider outA;
-//    juce::Slider outB;
-//    juce::Slider outC;
-//    juce::Slider outD;
+    juce::Label sizeLabel;
+    juce::Label decayLabel;
+    juce::Label outALabel;
+    juce::Label outBLabel;
+    juce::Label outCLabel;
+    juce::Label outDLabel;
+    juce::Label mixLabel;
+
     
     
 public:
     
     
     std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> sizeValue;
+    
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> decayValue;
+    
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> outAValue;
+    
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> outBValue;
+    
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> outCValue;
+    
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> outDValue;
     
     std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> mixValue;
 
