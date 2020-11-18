@@ -53,53 +53,39 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     decayLabel.setJustificationType(juce::Justification::centred);
 
     
-    outASlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    outASlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
+    outASlider.setSliderStyle(juce::Slider::LinearHorizontal);
+    outASlider.getLookAndFeel().setColour(juce::Slider::thumbColourId, juce::Colours::white);
+    outASlider.getLookAndFeel().setColour(juce::Slider::trackColourId, juce::Colours::white);
+    outASlider.setTextBoxStyle(juce::Slider::TextBoxLeft, true, 40, 25);
     outASlider.addListener(this);
     addAndMakeVisible(&outASlider);
     
     outAValue = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, "outA", outASlider);
-    
-    outALabel.attachToComponent(&outASlider, false);
-    outALabel.setText("Output A", juce::dontSendNotification);
-    outALabel.setJustificationType(juce::Justification::centred);
 
     
     
-    outBSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    outBSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
+    outBSlider.setSliderStyle(juce::Slider::LinearHorizontal);
+    outBSlider.setTextBoxStyle(juce::Slider::TextBoxLeft, true, 40, 25);
     outBSlider.addListener(this);
     addAndMakeVisible(&outBSlider);
     
     outBValue = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, "outB", outBSlider);
-    
-    outBLabel.attachToComponent(&outBSlider, false);
-    outBLabel.setText("Output B", juce::dontSendNotification);
-    outBLabel.setJustificationType(juce::Justification::centred);
 
     
-    outCSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    outCSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
+    outCSlider.setSliderStyle(juce::Slider::LinearHorizontal);
+    outCSlider.setTextBoxStyle(juce::Slider::TextBoxLeft, true, 40, 25);
     outCSlider.addListener(this);
     addAndMakeVisible(&outCSlider);
     
     outCValue = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, "outC", outCSlider);
-    
-    outCLabel.attachToComponent(&outCSlider, false);
-    outCLabel.setText("Output C", juce::dontSendNotification);
-    outCLabel.setJustificationType(juce::Justification::centred);
 
     
-    outDSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    outDSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
+    outDSlider.setSliderStyle(juce::Slider::LinearHorizontal);
+    outDSlider.setTextBoxStyle(juce::Slider::TextBoxLeft, true, 40, 25);
     outDSlider.addListener(this);
     addAndMakeVisible(&outDSlider);
     
     outDValue = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, "outD", outDSlider);
-    
-    outDLabel.attachToComponent(&outDSlider, false);
-    outDLabel.setText("Output D", juce::dontSendNotification);
-    outDLabel.setJustificationType(juce::Justification::centred);
     
     
 
@@ -131,7 +117,7 @@ void ReverbAudioProcessorEditor::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::white);
     g.setFont (15.0f);
-    g.drawText("Schroeder Reverb", 400, 10, 400, 20, 0);
+    g.drawText("Schroeder Reverb", 150, 10, 400, 20, 0);
     
 }
 
@@ -139,15 +125,16 @@ void ReverbAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
-    imageComponent.setBounds(125, 25, 700, 230);
+    imageComponent.setBounds(20, 25, 700, 230);
     
-    sizeSlider.setBounds(20, 305, 125, 125);
-    decaySlider.setBounds(150, 305, 125, 125);
-    outASlider.setBounds(280, 305, 125, 125);
-    outBSlider.setBounds(410, 305, 125, 125);
-    outCSlider.setBounds(540, 305, 125, 125);
-    outDSlider.setBounds(670, 305, 125, 125);
-    mixSlider.setBounds(800, 305, 125, 125);
+    outASlider.setBounds(720, 35, 210, 50);
+    outBSlider.setBounds(720, 92.5, 210, 50);
+    outCSlider.setBounds(720, 150, 210, 50);
+    outDSlider.setBounds(720, 207.5, 210, 50);
+    
+    sizeSlider.setBounds(250, 305, 125, 125);
+    decaySlider.setBounds(400, 305, 125, 125);
+    mixSlider.setBounds(550, 305, 125, 125);
 }
 
 void ReverbAudioProcessorEditor::sliderValueChanged (juce::Slider* slider)
