@@ -50,7 +50,9 @@ private:
     juce::Label outDLabel;
     juce::Label mixLabel;
 
+    juce::ImageComponent imageComponent;
     
+    juce::GroupComponent outGroupComponent;
     
 public:
     

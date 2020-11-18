@@ -15,10 +15,21 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (800, 300);
+    setSize (950, 450);
+    
+    auto schroederImage = juce::ImageCache::getFromMemory (BinaryData::image_png, BinaryData::image_pngSize);
+        
+        if (! schroederImage.isNull())
+            imageComponent.setImage (schroederImage, juce::RectanglePlacement::stretchToFit);
+        else
+            jassert (! schroederImage.isNull());
+    
+    addAndMakeVisible(imageComponent);
 
     
     sizeSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    sizeSlider.getLookAndFeel().setColour(juce::Slider::thumbColourId, juce::Colours::white);
+    sizeSlider.getLookAndFeel().setColour(juce::Slider::rotarySliderFillColourId, juce::Colours::whitesmoke);
     sizeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
     sizeSlider.addListener(this);
     addAndMakeVisible(&sizeSlider);
@@ -26,7 +37,7 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     sizeValue = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, "size", sizeSlider);
     
     sizeLabel.attachToComponent(&sizeSlider, false);
-    sizeLabel.setText("Size", juce::dontSendNotification);
+    sizeLabel.setText("+ Size", juce::dontSendNotification);
     sizeLabel.setJustificationType(juce::Justification::centred);
     
     
@@ -38,11 +49,11 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     decayValue = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, "decay", decaySlider);
     
     decayLabel.attachToComponent(&decaySlider, false);
-    decayLabel.setText("Decay", juce::dontSendNotification);
+    decayLabel.setText("+ Decay", juce::dontSendNotification);
     decayLabel.setJustificationType(juce::Justification::centred);
 
     
-    outASlider.setSliderStyle(juce::Slider::LinearVertical);
+    outASlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     outASlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
     outASlider.addListener(this);
     addAndMakeVisible(&outASlider);
@@ -55,7 +66,7 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
 
     
     
-    outBSlider.setSliderStyle(juce::Slider::LinearVertical);
+    outBSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     outBSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
     outBSlider.addListener(this);
     addAndMakeVisible(&outBSlider);
@@ -67,7 +78,7 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     outBLabel.setJustificationType(juce::Justification::centred);
 
     
-    outCSlider.setSliderStyle(juce::Slider::LinearVertical);
+    outCSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     outCSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
     outCSlider.addListener(this);
     addAndMakeVisible(&outCSlider);
@@ -79,7 +90,7 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     outCLabel.setJustificationType(juce::Justification::centred);
 
     
-    outDSlider.setSliderStyle(juce::Slider::LinearVertical);
+    outDSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     outDSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 25);
     outDSlider.addListener(this);
     addAndMakeVisible(&outDSlider);
@@ -89,6 +100,8 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     outDLabel.attachToComponent(&outDSlider, false);
     outDLabel.setText("Output D", juce::dontSendNotification);
     outDLabel.setJustificationType(juce::Justification::centred);
+    
+    
 
     
     mixSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
@@ -113,10 +126,12 @@ ReverbAudioProcessorEditor::~ReverbAudioProcessorEditor()
 void ReverbAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+   // g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+    g.fillAll(juce::Colours::black);
 
     g.setColour (juce::Colours::white);
     g.setFont (15.0f);
+    g.drawText("Schroeder Reverb", 400, 10, 400, 20, 0);
     
 }
 
@@ -124,14 +139,15 @@ void ReverbAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
+    imageComponent.setBounds(125, 25, 700, 230);
     
-    sizeSlider.setBounds(10, getHeight()/2, 110, 110);
-    decaySlider.setBounds(110, getHeight()/2, 110, 110);
-    outASlider.setBounds(220, getHeight()/2, 110, 110);
-    outBSlider.setBounds(330, getHeight()/2, 110, 110);
-    outCSlider.setBounds(440, getHeight()/2, 110, 110);
-    outDSlider.setBounds(550, getHeight()/2, 110, 110);
-    mixSlider.setBounds(660, getHeight()/2, 110, 110);
+    sizeSlider.setBounds(20, 305, 125, 125);
+    decaySlider.setBounds(150, 305, 125, 125);
+    outASlider.setBounds(280, 305, 125, 125);
+    outBSlider.setBounds(410, 305, 125, 125);
+    outCSlider.setBounds(540, 305, 125, 125);
+    outDSlider.setBounds(670, 305, 125, 125);
+    mixSlider.setBounds(800, 305, 125, 125);
 }
 
 void ReverbAudioProcessorEditor::sliderValueChanged (juce::Slider* slider)

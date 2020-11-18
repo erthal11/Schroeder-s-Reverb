@@ -13,6 +13,9 @@
             file="Source/PluginEditor.cpp"/>
       <FILE id="dA2Kx9" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
     </GROUP>
+    <GROUP id="{2E5639A4-48F6-CFFB-04B8-CE5C0FF08E50}" name="Resources">
+      <FILE id="F1IRbT" name="image.png" compile="0" resource="1" file="Resources/image.png"/>
+    </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
